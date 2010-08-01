@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-namespace WebBrowserHelperDemo {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window {
+﻿namespace WebBrowserHelperDemo {
+    public partial class MainWindow {
         public MainWindow() {
             InitializeComponent();
+
+            var model = new MainWindowViewModel {
+                MyHtml = @"
+<html>
+  <body>
+    Demonstrating setting the <em>WebBrowser</em>'s content via binding.
+  </body>
+</html>"
+            };
+
+            DataContext = model;
         }
     }
 }

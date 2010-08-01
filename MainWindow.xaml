@@ -1,8 +1,11 @@
 ﻿<Window x:Class="WebBrowserHelperDemo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:src="clr-namespace:WebBrowserHelperDemo" 
+        Title="WebBrowserHelperDemo" Height="350" Width="525">
     <Grid>
-        
+        <WebBrowser
+            src:WebBrowserHelper.Body="{Binding MyHtml}"
+            />
     </Grid>
 </Window>
